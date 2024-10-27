@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactUs_PHILGATE</title>
+    <style>
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #f6d3b4;
+    }
+
+    * {
+      font-family: "Average Sans", sans-serif;
+      color: black;
+    }
+
+    .navbar{
+      display: flex;
+      align-items: center;
+      margin-bottom: 4%;
+      background-color: #bf8563;
+      justify-content: space-around; 
+    }
+
+
+    .navbar a {
+      color: black;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold; 
+      transition: color 0.3s; 
+      font-size: 130%; 
+      margin-left: 3%;
+    }
+
+    .navbar a:hover {
+      color: #f6d3b4; 
+      transform: scale(1.05); 
+    }
+
+    .logo {
+      width: 120px;
+      max-width: 120px; 
+      margin-left: 20px;
+    }
+
+    #icon1, #icon2{
+      width: 6%;
+      margin-left: 30%; 
+    }
+
+    h2{
+      text-align: center;
+    }
+
+    p{
+      margin-left: 15%;
+      margin-right: 15%;
+      font-size: 110%;
+    }
+  
+    .img{
+      width: 70%;
+      margin-left: 15%;
+    }
+
+    .vid {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 750px;
+      height: 400px;
+      border: none;
+      display: block;  
+      margin-left: auto; 
+      margin-right: auto; 
+    }
+
+    .forvid{
+      margin-top: 50px;
+      border-top: 1px solid black; 
+    }
+
+    .forvid p{
+      line-height: 0.5;
+      margin-bottom: -5px;
+      text-align: center;
+    }
+  
+    footer{
+      padding: 1px;
+      height: 145px;
+      margin-top: 5%;
+      text-align: center;
+      background-color: #bf8563;
+    }
+  
+    footer img{
+      width: 3%;
+    }
+  
+    footer p{
+      text-align: center;
+    }
+    
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    .line {
+      height: 3px;
+      width: 25px;
+      background-color: black;
+      margin: 3px 0;
+    }
+
+    .menu {
+      display: none;
+      flex-direction: column;
+      background-color: #bf8563;
+      position: absolute;
+      top: 90px;
+      right: 0;
+      width: 100%;
+    }
+
+    .menu a {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .mylabelGlobal {
+      margin-left: 10%;
+      margin-right: 20%;
+      font-size: 150%;
+      line-height: 1.6;
+      margin-bottom: 126px;
+      margin-top: 60px;
+      text-decoration: none;
+    }
+
+    .mylabelGlobal a{
+      text-decoration: none;
+    }
+
+    @media (max-width: 767px) {
+      .navbar {
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        padding: 10px 80px; 
+        margin-bottom: 4%;
+        background-color: #bf8563;
+      }
+
+      .navbar a:hover {
+        color: #f6d3b4; 
+        transform: scale(1.05); 
+      }
+
+      .links {
+        display: none; 
+        width: 100%;
+      }
+
+      h2{
+        font-size: 100%;
+      }
+
+      .menu.active {
+        display: flex; 
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .logo{
+        width: 18%;
+      }
+
+      #icon1, #icon2{
+        margin-left: auto; 
+      }
+      footer img{
+        width: 7%;
+      }
+    }
+    @media (max-width: 1023px) {
+      .navbar {
+        padding: 10px 20px;
+      }
+
+      .navbar a:hover {
+        color: #f6d3b4; 
+        transform: scale(1.04); 
+      }
+
+      .logo {
+        width: 18%;
+      }
+
+      .vid{
+        width: 90%;
+          height: 300px;
+      }
+
+      #icon2{
+        width: 5%;
+      }
+
+      #icon1{
+        margin-left: 5%;
+      }
+
+      footer img{
+        width: 5%;
+      }
+    }
+    </style>
+</head>
+
+<body>
+  <header class="topnav wrapper">
+    <nav class="navbar">
+        <img class="logo" src="Figma_Logo.png" alt="Logo">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="links" id="links">
+            <a href="/WEBCS/Figma_web/main_home.html">Home</a>
+            <a href="/WEBCS/Figma_web/AboutUs.html">About Us</a>
+            <a href="/WEBCS/Figma_web/ContactUs.html">Contact</a>
+            <a href="/WEBCS/Figma_web/Shop1.html" style="color: #583a29;">Shop</a>
+            <a href="/WEBCS/Figma_web/profile.html" style="padding:0px;margin:0px"><img id="icon1" src="user.png" alt=""></a>
+        </div>
+        <div class="menu" id="menu">
+            <a href="/WEBCS/Figma_web/main_home.html">Home</a>
+            <a href="/WEBCS/Figma_web/AboutUs.html">About Us</a>
+            <a href="/WEBCS/Figma_web/ContactUs.html">Contact</a>
+            <a href="/WEBCS/Figma_web/Shop1.html" style="color: #583a29;">Shop</a>
+            <a href="/WEBCS/Figma_web/profile.html"><img id="icon2" src="user.png" alt=""></a>
+        </div>
+    </nav>
+</header>
+
+<div id="main" class="mylabelGlobal">
+  <h2>Contact Us</h2>
+  <a href="https://www.facebook.com/Cyril07.bacani" ><b>Facebook:</b> Facebook/FB_Philgate2024</a><br>
+  <a href="mailto:bacanicyril07@gmail.com" ><b>Email:</b> Cyril Cris T. Bacani</a><br>
+  <a><b>Tele/Phone Number:</b> +639968440363</a><br>
+  <h2>For More Information & Shop</h2>
+  <a href="https://mb.com.ph/2024/6/9/love-the-philippines-support-these-crafts#google_vignette">
+    - [MANILA BULLETIN]Love the Philippines— Support these crafts</a><br>
+  <a href="https://mandalameadow.com/arts-and-crafts-philippines/">
+    - [Mandala Meadow]Traditional arts and crafts in the Philippines</a><br>
+  <a href="https://www.scribd.com/presentation/516286037/Handicrafts-of-all-region">- Handicrafts of All Region</a><br>
+  <a href="https://shopharaya.com/blogs/news/8-ways-you-can-support-philippine-art-and-filipino-artisans?srsltid=AfmBOoqfxppvjyebRRSqeFR97QhQ6d76bK7UHcokvo7QkgWOrXvfnsui">- Haraya</a><br>
+</div>
+  
+  <footer>
+    <h3>Contact Us</h3>
+    <img src="facebook.png" alt="">
+    <img src="email.png" alt="">
+    <img src="phone-call.png" alt="">
+    <p>copyright &copy;, By Cyril Bacani</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

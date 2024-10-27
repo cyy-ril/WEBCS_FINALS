@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up_PHILGATE</title>
+    <style>
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #f6d3b4;
+    }
+
+    * {
+      font-family: "Average Sans", sans-serif;
+      color: black;
+    }
+
+    .navbar{
+      display: flex;
+      align-items: center;
+      margin-bottom: 4%;
+      background-color: #bf8563;
+      justify-content: space-around; 
+    }
+
+    .navbar a {
+      color: black;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold; 
+      transition: color 0.3s; 
+      font-size: 130%; 
+      margin-left: 3%;
+    }
+
+    .navbar a:hover {
+      color: #f6d3b4; 
+      transform: scale(1.05); 
+    }
+
+    .logo {
+      width: 13%;
+      max-width: 120px; 
+      margin-left: 5%;
+    }
+
+    h2{
+      text-align: center;
+    }
+
+    #main label, input{
+      color: #734e40;
+      font-size: 170%;
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    #main {
+      text-align: center; 
+      padding: 20px;
+      border: 1px solid #bf8563;
+      border-radius: 12px; 
+    }
+
+    a{
+      text-decoration: none;
+      color: #734e40;
+    }
+
+    button{
+      color: black;
+      background-color: #bf8563;
+      border-radius: 12px;
+      padding: 10px;
+      width: 15%;
+      margin-top: 20px;
+    }
+
+    #icon1, #icon2{
+      width: 6%;
+      margin-left: 30%; 
+    }
+    
+    footer{
+      padding: 1px;
+      height: 145px;
+      text-align: center;
+      margin-top: 2%;
+      background-color: #bf8563;
+    }
+
+    footer img{
+      width: 3%;
+    }
+
+    footer p{
+      text-align: center;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+  .line {
+    height: 3px;
+    width: 25px;
+    background-color: black;
+    margin: 3px 0;
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #bf8563;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    width: 100%;
+  }
+
+  .menu a {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  @media (max-width: 767px) {
+    .navbar {
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      padding: 10px 80px; 
+      margin-bottom: 4%;
+      background-color: #bf8563;
+  }
+
+    .links {
+      display: none; 
+      width: 100%;
+    }
+
+    .menu.active {
+      display: flex; 
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    .logo{
+      width: 18%;
+    }
+
+    input{
+      width: 80%;
+    }
+
+    #icon1, #icon2{
+        margin-left: auto; 
+      }
+
+    footer img{
+      width: 7%;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .navbar {
+      padding: 10px 20px;
+    }
+
+    .logo {
+      width: 18%;
+    }
+
+    .img {
+      width: 60%;
+      margin-left: 20%;
+    }
+
+    button {
+      width: 25%; 
+      font-size: 110%; 
+    }
+
+    #main{
+      margin-top: 20%;
+      margin-bottom: 28%;
+    }
+
+    #icon2{
+      width: 5%;
+      }
+
+      #icon1{
+        margin-left: 5%;
+      }
+
+    .navbar a {
+      margin: 0 20px;
+      padding: 10px;
+    }
+
+    footer img{
+      width: 5%;
+    }
+}
+    </style>
+</head>
+<body>
+
+  <header class="topnav wrapper">
+    <nav class="navbar">
+        <img class="logo" src="Figma_Logo.png" alt="Logo">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="links" id="links">
+            <a href="/WEBCS/Figma_web/main_home.html">Home</a>
+            <a href="/WEBCS/Figma_web/AboutUs.html">About Us</a>
+            <a href="/WEBCS/Figma_web/ContactUs.html">Contact</a>
+            <a href="/WEBCS/Figma_web/Shop1.html" style="color: #583a29;">Shop</a>
+            <a href="/WEBCS/Figma_web/profile.html" style="padding:0px;margin:0px"><img id="icon1" src="user.png" alt=""></a>
+        </div>
+        <div class="menu" id="menu">
+            <a href="/WEBCS/Figma_web/main_home.html">Home</a>
+            <a href="/WEBCS/Figma_web/AboutUs.html">About Us</a>
+            <a href="/WEBCS/Figma_web/ContactUs.html">Contact</a>
+            <a href="/WEBCS/Figma_web/Shop1.html" style="color: #583a29;">Shop</a>
+            <a href="/WEBCS/Figma_web/profile.html"><img id="icon2" src="user.png" alt=""></a>
+        </div>
+    </nav>
+</header>
+  
+  <div id="main">
+    <h2>SIGN-UP</h2>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="first" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <button type="submit" onclick="signup()">Sign-up</button>
+    <p>Already have an account? <a href="/WEBCS/Figma_web/LogIn.html">Login</a></p>
+  </div>
+  
+  <footer>
+    <h3>Contact Us</h3>
+    <img src="facebook.png" alt="">
+    <img src="email.png" alt="">
+    <img src="phone-call.png" alt="">
+
+    <p>copyright &copy;, By Cyril Bacani</p>
+  </footer>
+  
+  <script>
+  function signup() {
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;   
+    alert('Sign up successful! Welcome, ' + username + '!');
+    window.location.href = 'Shop1.html';
+  }
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+    }
+</script>
+</body>
+</html>

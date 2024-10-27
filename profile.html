@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile_PHILGATE</title>
+    <style>
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #f6d3b4;
+    }
+
+    * {
+      font-family: "Average Sans", sans-serif;
+      color: black;
+    }
+
+    .navbar{
+      display: flex;
+      align-items: center;
+      margin-bottom: 4%;
+      background-color: #bf8563;
+      justify-content: space-around; 
+    }
+
+    .navbar a {
+      color: black;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold; 
+      transition: 0.3s; 
+      font-size: 130%; 
+      margin-left: 3%;
+    }
+
+    .navbar a:hover {
+      color: #f6d3b4; 
+      transform: scale(1.05); 
+    }
+
+    .logo {
+      width: 13%;
+      max-width: 120px; 
+      margin-left: 5%;
+    }
+
+    table, th, td{
+      border: 1px solid black;
+      border-collapse: collapse;
+      text-align: center;
+      width: 50%;
+      margin-left: 20%;
+      font-size: 110%;
+      background-color: #bf8563;
+    }
+
+    table{
+      margin-bottom: 5%;
+      line-height: 1.8;
+      width: 60%;
+    }
+
+    #main{
+      margin-top: 5%;
+    }
+
+    h2{
+      text-align: center;
+    }
+
+    .sub label, input{
+      color: #734e40;
+      font-size: 110%;
+      width: 100%; 
+      max-width: 300px; 
+      margin-left: 10%;
+      margin-bottom: -20px;
+      }
+
+    .sub label{
+      margin-right: 22%;
+      margin-bottom: -35px;
+    }
+
+    .sub{
+      font-size: 170%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+    }
+
+    button{
+      color: white;
+      background-color: black;
+      border-radius: 12px;
+      padding: 8px;
+      width: 8%;
+      margin: 5px;
+    }
+
+    button:hover{
+      color: #f6d3b4; 
+      transform: scale(1.05);
+    }
+
+    #icon1, #icon2{
+      width: 6%;
+      margin-left: 30%; 
+    }
+
+    footer{
+      padding: 1px;
+      height: 145px;
+      text-align: center;
+      margin-top: 1%;
+      background-color: #bf8563;
+    }
+
+    footer img{
+      width: 3%;
+    }
+  
+    footer p{
+      text-align: center;
+    }
+
+    footer img {
+      width: 3%;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    .line {
+      height: 3px;
+      width: 25px;
+      background-color: black;
+      margin: 3px 0;
+    }
+
+    .menu {
+      display: none;
+      flex-direction: column;
+      background-color: #bf8563;
+      position: absolute;
+      top: 90px;
+      right: 0;
+      width: 100%;
+    }
+
+    .menu a {
+      padding: 10px;
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      .navbar {
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        padding: 10px 80px; 
+        margin-bottom: 4%;
+      }
+
+      .links {
+        display: none; 
+        width: 100%;
+      }
+
+      .menu.active {
+          display: flex; 
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .logo{
+        width: 18%;
+      }
+
+      label{
+        margin-right: 10%;
+        padding: 0;
+        margin-bottom: 10%;
+      }
+
+      .sub input{
+        width: 70%;
+        margin-top: 15%;
+        margin-right: 50%;
+      }
+
+      .sub{
+        display: inline-flex;
+        margin-left: 26%;
+      }
+
+       .reset{
+        margin-right: 80%;
+        margin-bottom: 2%;
+      }
+
+      .submit{
+        margin-right: 10%;
+        margin-top: -14%;
+      }
+
+      button{
+        margin-bottom: 5%;
+      }
+
+      #icon1, #icon2{
+        margin-left: auto; 
+      }
+
+      footer img{
+        width: 7%;
+      }
+    }
+   
+    @media (max-width: 1023px) {
+      .navbar {
+        padding: 10px 20px;
+      }
+
+      .logo {
+        width: 18%;
+      }
+    
+      button {
+        width: 20%;
+        font-size: 50%; 
+        margin-right: 26%;
+      }
+
+       label{
+        margin-right: 10%;
+        padding: 0;
+      }
+
+      input{
+        margin-right: 22%;
+        margin-top: 7%;
+        width: 50%;
+      }
+
+      #icon2{
+        width: 5%;
+      }
+
+      #icon1{
+        margin-left: 5%;
+      }
+
+      .navbar a {
+        margin: 0 20px;
+      }
+
+      footer img{
+        width: 5%;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <header class="topnav wrapper">
+    <nav class="navbar">
+        <img class="logo" src="Figma_Logo.png" alt="Logo">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="links" id="links">
+            <a href="/WEBCS/Figma_web/main_home.html">Home</a>
+            <a href="/WEBCS/Figma_web/AboutUs.html">About Us</a>
+            <a href="/WEBCS/Figma_web/ContactUs.html">Contact</a>
+            <a href="/WEBCS/Figma_web/Shop1.html" style="color: #583a29;">Shop</a>
+            <a href="/WEBCS/Figma_web/profile.html" style="padding:0px;margin:0px"><img id="icon1" src="user.png" alt=""></a>
+        </div>
+        <div class="menu" id="menu">
+            <a href="/WEBCS/Figma_web/main_home.html">Home</a>
+            <a href="/WEBCS/Figma_web/AboutUs.html">About Us</a>
+            <a href="/WEBCS/Figma_web/ContactUs.html">Contact</a>
+            <a href="/WEBCS/Figma_web/Shop1.html" style="color: #583a29;">Shop</a>
+            <a href="/WEBCS/Figma_web/profile.html"><img id="icon2" src="user.png" alt=""></a>
+        </div>
+    </nav>
+</header>
+
+      <div id="main">
+        <h2>PROFILE</h2>
+        <table>
+            <tr>
+              <th>Item Category Name</th>
+              <th>Price</th> 
+              <th>No. of Purchased Item</th>
+            </tr>
+            <tr>
+              <td>Potterry</td>
+              <td>PHP 3000</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Clothes</td>
+              <td>PHP 1500</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Wood Art</td>
+              <td>PHP 1000</td>
+              <td>1</td>
+            </tr>
+            <tr>
+                <td>Jewelry</td>
+                <td>PHP 500</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Chair</td>
+                <td>PHP 800</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Basket</td>
+                <td>PHP 500</td>
+                <td>2</td>
+            </tr>
+          </table>
+
+      <div class="sub">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="first" required><br><br>
+      <label for="email">Email: </label>
+      <input type="text" id="email" name="email" required><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br><br>
+      <label for="phone">Phone No.:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"><br><br>
+
+      <button class="reset" onclick="reset()" type="reset"> Reset </button>
+      <button class="submit" onclick="submit()" type="submit"> Submit </button>
+    </div>
+  </div>
+    
+    <footer>
+      <h3>Contact Us</h3>
+      <img src="facebook.png" alt="">
+      <img src="email.png" alt="">
+      <img src="phone-call.png" alt="">
+  
+      <p>copyright &copy;, By Cyril Bacani</p>
+    </footer>
+
+    <script>
+      function submit() {
+        const username = document.getElementById("username").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const phone = document.getElementById("phone").value;
+        alert(`Submitted!`);
+      }
+      function reset() {
+        document.getElementById("username").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("password").value = "";
+        document.getElementById("phone").value = "";
+      }
+      function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('active');
+      }
+  </script>
+</body>
+</html>

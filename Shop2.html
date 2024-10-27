@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop2_PHILGATE</title>
+    <style>
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #f6d3b4;
+    }
+    
+    * {
+      font-family: "Average Sans", sans-serif;
+      color: black;
+    }
+    
+    .navbar{
+      display: flex;
+      align-items: center;
+      margin-bottom: 4%;
+      background-color: #bf8563;
+      justify-content: space-around; 
+    }
+
+    button{
+      color: white;
+      background-color: black;
+      border-radius: 12px;
+      padding: 10px;
+      width: 9%;
+      display: block;
+      font-size: 110%;
+      margin: 20px auto;
+    }
+    
+    .main_img{
+      width: 450px;
+      height: 250px;
+    }
+
+    .main {
+      display: grid;
+      gap: 20px; 
+      padding: 20px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .item {
+      text-align: center; 
+      background-color: #cb8e6ac7; 
+      border-radius: 15px;
+      padding: 10px; 
+      box-shadow: 0 2px 10px rgba(18, 17, 17, 0.1);
+    }
+        
+    .item:hover{
+      color: #f6d3b4; 
+      transform: scale(1.05); 
+    }
+    
+    .navbar a {
+      color: black;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold; 
+      transition: color 0.3s; 
+      font-size: 130%; 
+      margin-left: 3%;
+    }
+    
+    .navbar a:hover {
+      color: #f6d3b4; 
+      transform: scale(1.05); 
+    }
+    
+    .logo {
+      width: 120px;
+      max-width: 120px; 
+      margin-left: 20px;
+    }
+
+    #icon1, #icon2{
+      width: 6%;
+      margin-left: 30%; 
+    }
+
+    h2{
+      text-align: center;
+    }
+
+    p{
+      margin-left: 15%;
+      margin-right: 15%;
+      font-size: 110%;
+    }
+  
+    .main {
+      display: grid;
+      gap: 20px; 
+      padding: 20px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+        
+    .main_img{
+      width: 450px;
+      height: 250px;
+    }
+    
+    footer{
+      padding: 1px;
+      height: 145px;
+      margin-top: 5%;
+      text-align: center;
+      background-color: #bf8563;
+    }
+      
+    footer img{
+      width: 3%;
+    }
+      
+    footer p{
+      text-align: center;
+    }
+    
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    .line {
+      height: 3px;
+      width: 25px;
+      background-color: black;
+      margin: 3px 0;
+    }
+
+    .menu {
+      display: none;
+      flex-direction: column;
+      background-color: #bf8563;
+      position: absolute;
+      top: 90px;
+      right: 0;
+      width: 100%;
+    }
+
+    .menu a {
+      padding: 10px;
+      text-align: center;
+    }
+    
+    @media (max-width: 767px) {
+      .navbar {
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        padding: 10px 80px; 
+        margin-bottom: 4%;
+        background-color: #bf8563;
+      }
+    
+      .main_img {
+          width: 100%; 
+        }
+
+        button{
+          background-color: black;
+          padding:5px;
+          width: 30%;
+          font-size: 120%;
+        }
+    
+        .item {
+          text-align: center; 
+          background-color: #cb8e6ac7; 
+          border-radius: 15px;
+          padding: 10px; 
+          box-shadow: 0 2px 10px rgba(18, 17, 17, 0.1);
+          transition: transform 0.2s; 
+        }
+    
+        .item:hover {
+          color: #f6d3b4; 
+          transform: scale(1.05); 
+        }
+    
+        .navbar a:hover {
+          color: #f6d3b4; 
+          transform: scale(1.05); 
+        }
+    
+        .links {
+          display: none; 
+          width: 100%;
+        }
+    
+        .menu.active {
+          display: flex; 
+        }
+  
+        .hamburger {
+          display: flex;
+        }
+  
+        .logo{
+          width: 18%;
+        }
+  
+        #icon1, #icon2{
+          margin-left: auto; 
+        }
+          
+        .main{
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+
+        footer img{
+          width: 7%;
+        }
+      }
+    
+      @media (max-width: 1023px) {
+        .navbar {
+        padding: 10px 20px;
+      }
+  
+        .navbar a:hover {
+          color: #f6d3b4; 
+          transform: scale(1.04); 
+        }
+  
+        .logo {
+          width: 18%;
+        }
+  
+        .main_img {
+          width: 100%; 
+        }
+  
+        button {
+          width: 25%; 
+          font-size: 110%; 
+        }
+  
+        .item {
+          text-align: center; 
+          background-color: #cb8e6ac7; 
+          border-radius: 15px;
+          padding: 10px; 
+          box-shadow: 0 2px 10px rgba(18, 17, 17, 0.1);
+          transition: transform 0.2s; 
+        }
+  
+        .item:hover {
+          color: #f6d3b4; 
+          transform: scale(1.05); 
+        }
+  
+        #icon2{
+          width: 5%;
+          margin-left: 4%;
+        }
+
+        #icon1{
+          margin-left: 5%;
+        }
+  
+        footer img{
+          width: 5%;
+        }
+      }
+    </style>  
+</head>
+    <body>
+      <header class="topnav wrapper">
+        <nav class="navbar">
+          <img class="logo" src="Figma_Logo.png" alt="Logo">
+          <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <div class="links" id="links">
+            <a href="/WEBCS/Figma_web/main_home.html">Home</a>
+            <a href="/WEBCS/Figma_web/AboutUs.html">About Us</a>
+            <a href="/WEBCS/Figma_web/ContactUs.html">Contact</a>
+            <a href="/WEBCS/Figma_web/Shop1.html" style="color: #583a29;">Shop</a>
+            <a href="/WEBCS/Figma_web/profile.html" style="padding:0px;margin:0px"><img id="icon1" src="user.png" alt=""></a>
+          </div>
+          <div class="menu" id="menu">
+              <a href="/WEBCS/Figma_web/main_home.html">Home</a>
+              <a href="/WEBCS/Figma_web/AboutUs.html">About Us</a>
+              <a href="/WEBCS/Figma_web/ContactUs.html">Contact</a>
+              <a href="/WEBCS/Figma_web/Shop1.html" style="color: #583a29;">Shop</a>
+              <a href="/WEBCS/Figma_web/profile.html"><img id="icon2" src="user.png" alt=""></a>
+          </div>
+        </nav>
+      </header>
+      <h2>SHOP</h2>
+      <div class="main">
+        <div class="item" data-description="Vivamus mollis, ipsum vitae congue euismod, turpis erat aliquet velit, ut dignissim ex sem a purus. Cras malesuada nulla eu quam vehicula, semper porta neque condimentum. Duis rhoncus libero vitae lectus commodo, eu convallis eros gravida. Mauris nisi dui, placerat id felis a, accumsan convallis magna.">
+          <img class="main_img" src="https://mandalameadow.com/wp-content/uploads/2021/01/Woodcarving-in-the-Philippines.jpg"  alt="">
+          <p>Wood carving</p>
+        </div>
+        <div class="item" data-description="Quisque accumsan, ipsum nec maximus bibendum, lectus sapien tempor mauris, nec tristique tellus urna at nunc. Quisque libero felis, consectetur ac mi ac, pellentesque viverra velit. Nulla sed risus quis ligula accumsan euismod. Nullam id purus laoreet, blandit lectus ac, elementum velit.">
+          <img class="main_img" src="https://static.wixstatic.com/media/9eba06_1e0b192f80b94db5a66484482a872daf~mv2_d_3938_2201_s_2.jpg/v1/fill/w_661,h_370,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/banig-2.jpg" alt="">
+          <p>Banig</p>
+        </div>
+        <div class="item" data-description="The Philippine pottery tradition peaked during the Metal Age, from 200BC to AD900, when Filipinos at that time explored specialised pottery forms, designs and techniques—a period referred to as the Golden Age of Pottery.">
+            <img class="main_img" src="https://images.surferseo.art/44234932-e2f3-4966-b437-f22bfc310bfd.jpeg" alt="">
+            <p>pottery products</p>
+        </div>   
+        <div class="item" data-description="Nulla condimentum ac magna nec fermentum. Etiam elementum nisi interdum auctor volutpat. Ut sed ex mattis urna pharetra condimentum. Duis eget justo blandit, condimentum risus eget, tempor augue. Morbi ut turpis sed ante ullamcorper mattis. Mauris felis turpis, facilisis quis hendrerit pulvinar, tempor pulvinar augue. ">
+          <img class="main_img" src="https://dreammeaning.online/wp-content/uploads/2018/07/53eba983c09b2ad2c10bfc8ddb9a07aa.jpg" alt="">
+          <p>Walis Tambo</p>
+        </div>
+        <div class="item" data-description="Nullam ut efficitur leo, nec vestibulum magna. Pellentesque pellentesque pharetra sem et lobortis. Maecenas mi neque, suscipit non leo vitae, dictum euismod felis. In nec diam eget ante ultrices volutpat. Fusce venenatis rhoncus aliquet. Nullam scelerisque leo id quam vestibulum aliquet. Sed leo tellus, finibus a nisi pellentesque, euismod cursus felis. ">
+          <img class="main_img" src="https://mandalameadow.com/wp-content/uploads/2021/01/shutterstock_1670206342.jpg" alt="">
+          <p>T’nalak</p>
+        </div>
+        <div class="item" data-description="Ut tortor elit, rutrum ac nulla facilisis, pellentesque efficitur leo. Sed ante quam, dictum at mattis at, tincidunt nec tortor. Praesent ut ex commodo, faucibus ipsum in, euismod augue.">
+            <img class="main_img" src="https://mandalameadow.com/wp-content/uploads/2021/01/shutterstock_1638436702.jpg" alt="">
+            <p> T’nalak purses</p>
+        </div>
+        <div class="item" data-description="Pellentesque pharetra nunc eu tortor pellentesque consequat. Phasellus mattis porttitor eros sit amet laoreet. Vivamus nec est sed enim aliquet scelerisque.">
+            <img class="main_img" src="https://upload.wikimedia.org/wikipedia/commons/6/60/Abaca_rooom_slippers_%288385296081%29.jpg"  alt="">
+            <p>Abaca Slippers</p>
+        </div>
+        <div class="item" data-description="Sed dictum ante et ullamcorper commodo. Quisque sit amet enim non erat mattis rhoncus. Curabitur scelerisque egestas porttitor. Maecenas vestibulum, lacus et consequat varius, sapien arcu blandit felis, at bibendum orci massa sit amet lectus. Donec nisl nibh, ornare ac odio in, imperdiet dictum urna. Donec bibendum placerat metus a iaculis. ">
+          <img class="main_img" src="https://d1bv4heaa2n05k.cloudfront.net/user-images/original/8c86f46b-a25e-442a-9f90-422f6ebb9554.Zamboanga_YakanWeaving%20Village_Textiles%20065_destinationMain_1438355488816.jpeg" alt="">
+          <p>Yakan Fabric</p>
+        </div>
+        <div class="item" data-description="In semper ligula eu risus rhoncus lacinia. Donec consequat pretium metus id fermentum. Sed ante dolor, varius ac pulvinar in, mollis et eros. Aliquam erat volutpat. Cras a odio a arcu viverra vulputate non sed libero. ">
+            <img class="main_img" src="https://fyi09.wordpress.com/wp-content/uploads/2019/05/duyan-native-rattan.jpg"  alt="">
+            <p>Duyan</p>
+        </div>   
+        <div class="item" data-description="Cras gravida, risus et imperdiet facilisis, nisi nunc dictum lacus, non consectetur orci diam sed mauris. Proin non velit in augue suscipit luctus. Fusce vulputate, sapien sit amet gravida accumsan, neque metus egestas tellus, ac auctor sem nibh quis justo. ">
+            <img class="main_img" src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*_TR_OWgt7xN5ZXvzwz7LMw.jpeg"  alt="">
+            <p>Pamaypay (Anahaw)</p>
+        </div>    
+        <div class="item" data-description="Phasellus a pharetra ipsum. Vivamus magna ligula, ullamcorper sit amet risus ac, eleifend congue risus. Aliquam elit mi, pulvinar non consectetur et, venenatis bibendum ligula.">
+            <img class="main_img" src="https://romblonparadise.com/wp-content/uploads/2022/11/banig-products-romblon.jpg"  alt="">
+            <p>Banig</p>
+        </div>
+        <div class="item" data-description="Nam imperdiet quis turpis sed porttitor. Maecenas feugiat iaculis risus eget vestibulum. Sed lectus ex, sodales in leo eu, vestibulum tincidunt sapien. Sed sed pretium nulla.">
+            <img class="main_img" src="https://3.imimg.com/data3/MN/HB/MY-11487458/bamboo-handicrafts-home-decorative-items.jpg"  alt="">
+            <p>Bamboo Basket</p>
+        </div>
+    </div>
+    <button id="back" type="button">Back</button>
+    
+    <footer>
+        <h3>Contact Us</h3>
+        <img src="facebook.png" alt="">
+        <img src="email.png" alt="">
+        <img src="phone-call.png" alt="">
+        <p>copyright &copy;, By Cyril Bacani</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.item').forEach(item => {
+            item.addEventListener('click', function() {
+                const description = this.getAttribute('data-description');
+                alert(description);
+            });
+        });
+        document.getElementById('back').addEventListener('click', function() {
+            window.location.href = 'Shop1.html';
+        });
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

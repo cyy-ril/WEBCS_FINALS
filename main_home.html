@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MainHome_PHILGATE</title>
+    <style>
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #f6d3b4;
+    }
+
+    * {
+      font-family: "Average Sans", sans-serif;
+      color: black;
+    }
+
+    .navbar{
+      display: flex;
+      align-items: center;
+      margin-bottom: 4%;
+      background-color: #bf8563;
+      justify-content: space-around; 
+    }
+    
+    .navbar a {
+      color: black;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold; 
+      transition: color 0.3s; 
+      font-size: 130%; 
+      margin-left: 3%;
+    }
+
+    .navbar a:hover {
+      color: #f6d3b4; 
+      transform: scale(1.05); 
+    }
+
+    .logo {
+      width: 120px;
+      max-width: 120px; 
+      margin-left: 20px;
+    }
+
+    #icon1, #icon2{
+      width: 6%;
+      margin-left: 30%; 
+    }
+
+    .img {
+      width: 30%; 
+      margin-top: 8%;
+      margin-left: 10%;
+    }
+
+    .cont { 
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+      margin-top: -28%;
+      margin-bottom: 15%;
+      margin-right: 10%;
+      line-height: 1.6;
+    }
+
+    button {
+      background-color: rgb(198, 100, 100);
+      padding: 15px;
+      width: 20%;
+      font-size: 120%;
+    }
+
+    button:hover {
+      background-color: rgb(169, 42, 42);
+      transform: scale(1.09); 
+    }
+
+    footer {
+      padding: 1px;
+      height: 145px;
+      text-align: center;
+      background-color: #bf8563;
+    }
+
+    footer img {
+      width: 3%;
+    }
+
+    footer p {
+      text-align: center;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    .line {
+      height: 3px;
+      width: 25px;
+      background-color: black;
+      margin: 3px 0;
+    }
+
+    .menu {
+      display: none;
+      flex-direction: column;
+      background-color: #bf8563;
+      position: absolute;
+      top: 90px;
+      right: 0;
+      width: 100%;
+    }
+
+    .menu a {
+      padding: 10px;
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      .navbar {
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        padding: 10px 80px; 
+        margin-bottom: 4%;
+        background-color: #bf8563;
+      }
+
+      .links {
+        display: none; 
+        width: 100%;
+      }
+
+      .menu.active {
+        display: flex; 
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .logo{
+        width: 18%;
+      }
+
+      .img{
+        width: 80%;
+        margin-bottom: -5%;
+        
+      }
+
+      .cont{
+        margin-left: 10%;
+      }
+
+      button{
+        background-color: rgb(198, 100, 100);
+        padding:5px;
+        width: 30%;
+        font-size: 120%;
+      }
+
+      #icon1, #icon2{
+        margin-left: auto; 
+      }
+
+      footer img{
+        width: 7%;
+      }
+    }
+    @media (max-width: 1023px) {
+      .navbar {
+        padding: 10px 20px;
+      }
+
+      .navbar a:hover {
+        color: #f6d3b4; 
+        transform: scale(1.04); 
+      }
+
+      .logo {
+        width: 18%;
+      }
+
+      .img {
+        width: 60%; 
+        margin-left: 20%; 
+      }
+
+      .cont {
+        margin-top: 5%; 
+        padding: 0 5%; 
+        margin-right: 7%
+      }
+
+      button {
+        width: 30%; 
+        font-size: 110%; 
+      }
+
+      #icon2{
+        width: 5%;
+      }
+
+      #icon1{
+        margin-left: 5%;
+      }
+
+      footer {
+        height: 160px;
+      }
+
+      footer img{
+        width: 7%;
+      }
+    }
+    </style>
+</head>
+<body>
+
+    <header class="topnav wrapper">
+      <nav class="navbar">
+        <img class="logo" src="Figma_Logo.png" alt="Logo">
+        <div class="hamburger" onclick="toggleMenu()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div class="links" id="links">
+          <a href="/WEBCS/Figma_web/main_home.html">Home</a>
+          <a href="/WEBCS/Figma_web/AboutUs.html">About Us</a>
+          <a href="/WEBCS/Figma_web/ContactUs.html">Contact</a>
+          <a href="/WEBCS/Figma_web/Shop1.html" style="color: #583a29;">Shop</a>
+          <a href="/WEBCS/Figma_web/profile.html" style="padding:0px;margin:0px"><img id="icon1" src="user.png" alt=""></a>
+      </div>
+      <div class="menu" id="menu">
+          <a href="/WEBCS/Figma_web/main_home.html">Home</a>
+          <a href="/WEBCS/Figma_web/AboutUs.html">About Us</a>
+          <a href="/WEBCS/Figma_web/ContactUs.html">Contact</a>
+          <a href="/WEBCS/Figma_web/Shop1.html" style="color: #583a29;">Shop</a>
+          <a href="/WEBCS/Figma_web/profile.html"><img id="icon2" src="user.png" alt=""></a>
+      </div>
+    </nav>
+  </header>
+  
+  <div id="main">
+      <img class="img" src="https://mandalameadow.com/wp-content/uploads/2021/01/20191126_093847.jpg" alt="">
+  </div>
+  <div class="cont">
+    <h1>Sollicitudin at felis</h1>
+    <p>Nam arcu mauris, gravida id facilisis elementum, sollicitudin at felis. Proin consequat nunc leo, quis faucibus felis venenatis ut. Fusce convallis, nisl vitae maximus posuere, velit erat posuere velit, ut sodales lacus neque vel enim. Integer at tincidunt tortor. Nunc facilisis, diam at tincidunt ultrices, nunc dui sagittis odio, eu gravida ante dui vel dolor. Vivamus lacinia felis porta lorem facilisis consectetur. Mauris fringilla sem in nibh condimentum varius. Mauris dignissim accumsan nunc, eget iaculis dui. Sed leo sapien, volutpat vitae libero eu, viverra maximus tortor. Pellentesque fringilla purus tellus, vitae lacinia felis sollicitudin vel.</p>
+
+    <button onclick="buy()">BUY NOW!</button>
+  </div>
+    
+  <footer>
+    <h3>Contact Us</h3>
+    <img src="facebook.png" alt="">
+    <img src="email.png" alt="">
+    <img src="phone-call.png" alt="">
+    <p>copyright &copy;, By Cyril Bacani</p>
+  </footer>
+  
+  <script>
+    function buy() {
+      window.location.href = '/WEBCS/Figma_web/Sign-up.html';
+    }
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+    }
+    </script>
+</body>
+</html>
